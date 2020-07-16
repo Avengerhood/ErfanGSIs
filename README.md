@@ -1,13 +1,13 @@
-# ErfanGSIs Tool - Hitsuki Edition
+# ErfanGSIs Tool - Hitsuki Edition - Avengerhood fork for MIUI Daisy
 
-This repository is a fork of a fork of the ErfanGSIs Tool for private use, you are free to create your fork and make your changes (at least give the credits to all contributors of the ErfanGSIs Tool project).
+This repository is a fork of a fork of a fork of the ErfanGSIs Tool for private use, you are free to create your fork and make your changes (at least give the credits to all contributors of the ErfanGSIs Tool project).
 
 See also the [ErfanGSIs-Builder](https://github.com/Project-WKF/ErfanGSIs-Builder) repository where you can see GSIs being made with GitHub Actions.
 
 ### Download tools
 
 ```
-git clone --recurse-submodules https://github.com/HitaloSama/ErfanGSIs.git
+git clone --recurse-submodules https://github.com/Avengerhood/ErfanGSIs.git
 cd ErfanGSIs
 ```
 
