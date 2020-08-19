@@ -200,7 +200,7 @@ if [ "$outputtype" == "Aonly" ]; then
 fi
 
 date=`date +%Y%m%d`
-outputname="$romtypename-$outputtype-$sourcever-$date-ErfanGSI-Hitsuki"
+outputname="$romtypename-$outputtype-$sourcever-$date-ErfanGSI-Hitsuki-#DaisyPorts"
 outputimagename="$outputname".img
 outputtextname="$outputname".txt
 if [ "$4" == "" ]; then
@@ -249,3 +249,4 @@ $scriptsdir/mkimage.sh $systemdir $outputtype $systemsize $output $useold > $tem
 
 echo "-> Remove Temp dir"
 rm -rf "$tempdir" "$verRunner"
+sudo simg2img $LOCALDIR/$outdirname/*AB*.img system.img
