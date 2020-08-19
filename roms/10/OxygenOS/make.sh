@@ -22,7 +22,7 @@ echo "ro.boot.project_name=17801" >> $1/build.prop
 sed -i "/\/vendor\/etc\/audio /d" $1/bin/rw-system.sh
 
 # drop dirac
-rm -rf $1/app/NxpNfcNci
+#rm -rf $1/app/NxpNfcNci
 
 # fix op6t notch
 sed -i "s/M-185,0 H183.34 c-9.77.44-19.57,0.08-29.28,1.24-20.33,1.14-41.18,5.17-58.62,16.24 C78.54,28.27,66,44.26,52,58.29 a72.73,72.73,0,0,1-38.29,19.58 c-16.53,2.51-34,1-49.09-6.62-9.85-4.62-17.88-12.24-25.21-20.18-10.46-11.27-20.9-22.75-33.53-31.66-11.49-8-24.9-12.78-38.53-15.42 C-149.92,0.81,-167.51.39,-185,0Z/00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/" $1/framework/framework-res.apk
@@ -51,3 +51,20 @@ OP_FEATURE_SMART_BOOST
      sed -i "/$i/d" $1/etc/feature_list
    fi
 done
+
+
+#Fix treble
+echo "ro.treble.enabled=true" >> $1/build.prop
+
+
+#fix systemui crash because of FOD
+echo "DEVICE_PROVISIONED=1" >> $1/build.prop
+
+#fix BT
+echo "persist.bluetooth.bluetooth_audio_hal.disabled=true" >> $1/build.prop
+echo "persist.bluetooth.bluetooth_audio_hal.enabled=false" >> $1/build.prop
+echo "persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxhd-aac" >> $1/build.prop
+echo "vendor.bluetooth.soc=cherokee" >> $1/build.prop
+
+# build.prop
+echo "ro.bluetooth.library_name=libbluetooth_qti.so" >> $1/build.prop
