@@ -8,15 +8,15 @@ thispath=`cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd`
 # Copy system files
 rsync -ra $thispath/system/ $systempath
 # Remove libdolphin.so
-rm -rf $1/lib64/libdolphin.so
+#rm -rf $1/lib64/libdolphin.so
 # Drop caf permissions
-rm -rf $1/etc/permissions/qti_permissions.xml
-rm -rf $1/etc/permissions/com.qti.dpmframework.xml
+#rm -rf $1/etc/permissions/qti_permissions.xml
+#rm -rf $1/etc/permissions/com.qti.dpmframework.xml
 # We no Dirac here
-rm -rf $1/priv-app/DiracAudioControlService
-rm -rf $1/app/DiracManager
+#rm -rf $1/priv-app/DiracAudioControlService
+#rm -rf $1/app/DiracManager
 # Drop qcom location
-rm -rf $1/priv-app/com.qualcomm.location
+#rm -rf $1/priv-app/com.qualcomm.location
 
 ## SELinux
 # Append file_context
@@ -85,8 +85,8 @@ fi
 # Disable adb secure
 sed -i "s/ro.adb.secure=1/ro.adb.secure=0/" $1/etc/prop.default
 # cleanup build prop
-$thispath/../../scripts/propcleanner.sh $1/build.prop > $1/../../build.prop
-cp -fpr $1/../../build.prop $1/
+#$thispath/../../scripts/propcleanner.sh $1/build.prop > $1/../../build.prop
+#cp -fpr $1/../../build.prop $1/
 
 
 ## Append to phh script
