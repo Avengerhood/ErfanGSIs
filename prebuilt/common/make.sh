@@ -85,8 +85,8 @@ fi
 # Disable adb secure
 sed -i "s/ro.adb.secure=1/ro.adb.secure=0/" $1/etc/prop.default
 # cleanup build prop
-#$thispath/../../scripts/propcleanner.sh $1/build.prop > $1/../../build.prop
-#cp -fpr $1/../../build.prop $1/
+$thispath/../../scripts/propcleanner.sh $1/build.prop > $1/../../build.prop
+cp -fpr $1/../../build.prop $1/
 
 
 ## Append to phh script
