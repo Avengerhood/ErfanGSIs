@@ -23,9 +23,6 @@ rm -rf $1/app/SoterService
 rm -rf $1/priv-app/MiuiScanner
 rm -rf $1/priv-app/Updater
 rm -rf $1/priv-app/Velvet
-
-
-
 rm -rf $1/data-app/Huanji
 rm -rf $1/data-app/MiFinance 
 rm -rf $1/data-app/MiuiScanner
